@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAPTSS Digital+ - Plataforma de Formação Profissional para Angola. Centralize suas inscrições nos centros de formação do MAPTSS/INEFOP.">
+    <meta name="keywords" content="MAPTSS, INEFOP, formação profissional, Angola, inscrições, cursos">
+    <meta name="author" content="MAPTSS - Ministério da Administração Pública, Trabalho e Segurança Social">
+    
+    <title>MAPTSS Digital+ | Formação Profissional Angola</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- CSS Libraries -->
+    <link href="css/bootstrap-local.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-graduation-cap me-2 text-warning"></i>
+                MAPTSS Digital+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beneficios">Benefícios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle btn btn-warning text-dark ms-2" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i> Acesso
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pages/cidadao/index.html"><i class="fas fa-user me-2"></i>Cidadão</a></li>
+                            <li><a class="dropdown-item" href="pages/gestor/index.html"><i class="fas fa-user-tie me-2"></i>Gestor</a></li>
+                            <li><a class="dropdown-item" href="pages/empregador/index.html"><i class="fas fa-building me-2"></i>Empregador</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content fade-in-up">
+                        <h1 class="display-3 fw-bold text-white mb-4">
+                            MAPTSS Digital+
+                        </h1>
+                        <p class="lead text-light mb-4 fs-4">
+                            A ponte digital entre os angolanos e as oportunidades de formação profissional
+                        </p>
+                        <p class="text-light mb-5 fs-5">
+                            Centralize suas inscrições, encontre centros próximos e transforme seu futuro profissional com apenas alguns cliques.
+                        </p>
+                        <div class="d-flex flex-column flex-md-row gap-3">
+                            <a href="pages/cidadao/index.html" class="btn btn-warning btn-lg px-4 py-3 fw-semibold">
+                                <i class="fas fa-rocket me-2"></i>
+                                Começar Agora
+                            </a>
+                            <a href="#sobre" class="btn btn-outline-light btn-lg px-4 py-3">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Saber Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image fade-in-right">
+                        <div class="bg-white rounded-lg shadow-2xl p-4 mx-auto" style="max-width: 500px;">
+                            <div class="mockup-phone">
+                                <div class="mockup-content bg-gradient-to-br from-yellow-400 to-red-600 text-white p-6 rounded">
+                                    <h3 class="h5 mb-3">
+                                        <i class="fas fa-map-marker-alt me-2"></i>
+                                        Centros Próximos
+                                    </h3>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-white bg-opacity-20 rounded p-2 me-3">
+                                            <i class="fas fa-school"></i>
+                                        </div>
+                                        <div>
+                                            <p class="mb-1 fw-semibold">Centro INEFOP Luanda</p>
+                                            <small class="opacity-75">2.3 km • 15 vagas disponíveis</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-white bg-opacity-20 rounded p-2 me-3">
+                                            <i class="fas fa-tools"></i>
+                                        </div>
+                                        <div>
+                                            <p class="mb-1 fw-semibold">Centro Técnico Maianga</p>
+                                            <small class="opacity-75">5.1 km • 8 vagas disponíveis</small>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-light btn-sm w-100 mt-3">
+                                        <i class="fas fa-plus me-2"></i>
+                                        Ver Todos os Centros
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#sobre" class="text-white">
+                <i class="fas fa-chevron-down animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4 text-angola-red">Sobre o MAPTSS Digital+</h2>
+                    <p class="lead text-muted">
+                        Uma plataforma inovadora que revoluciona o acesso à formação profissional em Angola
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-angola-yellow rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-eye text-white fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Visão</h4>
+                            <p class="text-muted">
+                                Ser a principal plataforma digital de formação profissional em Angola, conectando cidadãos às melhores oportunidades de desenvolvimento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-angola-red rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-heart text-white fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Missão</h4>
+                            <p class="text-muted">
+                                Facilitar o acesso democrático à formação profissional, eliminando barreiras geográficas e burocráticas através da tecnologia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-dark rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-target text-white fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Objetivos</h4>
+                            <p class="text-muted">
+                                Digitalizar processos, reduzir filas, aumentar transparência e conectar 100.000+ angolanos às oportunidades de formação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="funcionalidades" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Funcionalidades Principais</h2>
+                    <p class="lead text-muted">
+                        Recursos inovadores que facilitam sua jornada de formação profissional
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Localização GPS</h5>
+                        <p class="text-muted">
+                            Encontre automaticamente os centros de formação mais próximos da sua localização.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Cadastro Simplificado</h5>
+                        <p class="text-muted">
+                            Registe-se rapidamente com apenas BI, telefone e email. Processo 100% digital.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Upload de Documentos</h5>
+                        <p class="text-muted">
+                            Envie seus documentos digitalizados de forma segura e organizada.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Escolha de Cursos</h5>
+                        <p class="text-muted">
+                            Navegue pelos cursos disponíveis e escolha datas que se adequem à sua agenda.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Notificações Inteligentes</h5>
+                        <p class="text-muted">
+                            Receba alertas via email, SMS e WhatsApp sobre suas inscrições e prazos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Certificados QR</h5>
+                        <p class="text-muted">
+                            Certificados com QR Code para verificação instantânea da autenticidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Benefícios para Todos</h2>
+                    <p class="lead text-muted">
+                        Uma solução que transforma a experiência de formação profissional
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="benefits-card government">
+                        <h4 class="fw-bold mb-4 text-angola-red">
+                            <i class="fas fa-landmark me-3"></i>
+                            Para o Governo
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Redução de 80% nas filas físicas
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Dados centralizados e relatórios em tempo real
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Maior transparência e controlo anti-corrupção
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Economia de recursos humanos e materiais
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Integração com sistemas governamentais existentes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="benefits-card citizens">
+                        <h4 class="fw-bold mb-4 text-angola-yellow">
+                            <i class="fas fa-users me-3"></i>
+                            Para os Cidadãos
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Inscrições 24/7 de qualquer lugar
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Tempo médio de inscrição: apenas 5 minutos
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Acompanhamento do status em tempo real
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Notificações automáticas de prazos e resultados
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check text-success me-3"></i>
+                                Acesso inclusivo para pessoas com deficiência
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-5 bg-angola-gradient">
+        <div class="container">
+            <div class="row text-center text-white">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold counter" data-count="100000">0</h2>
+                        <p class="lead">Candidatos Esperados</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold counter" data-count="1000">0</h2>
+                        <p class="lead">Centros Mapeados</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold">80<span class="fs-3">%</span></h2>
+                        <p class="lead">Redução de Filas</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-bold">5<span class="fs-3">min</span></h2>
+                        <p class="lead">Tempo de Inscrição</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Perguntas Frequentes</h2>
+                    <p class="lead text-muted">
+                        Esclarecemos as principais dúvidas sobre a plataforma
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Como faço para me inscrever num curso?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    É muito simples! Acesse o painel do cidadão, crie sua conta com BI, telefone e email, 
+                                    localize os centros próximos, escolha o curso desejado e envie seus documentos. 
+                                    Todo o processo leva menos de 5 minutos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Que documentos preciso para me inscrever?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Você precisará do Bilhete de Identidade (BI), certificado de habilitações literárias, 
+                                    comprovativo de residência e uma fotografia tipo passe. Todos os documentos podem ser 
+                                    enviados digitalizados através da plataforma.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    A plataforma funciona em todo o país?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim! A plataforma abrange todos os centros MAPTSS/INEFOP em todas as 18 províncias de Angola. 
+                                    Use a funcionalidade GPS para encontrar automaticamente os centros mais próximos da sua localização.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Como recebo notificações sobre minha inscrição?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Enviamos notificações através de email, SMS e WhatsApp (quando disponível). 
+                                    Você será informado sobre aprovação da inscrição, datas de exames, início das aulas 
+                                    e outros eventos importantes do seu curso.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    O serviço tem algum custo?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Não! A plataforma MAPTSS Digital+ é completamente gratuita para todos os cidadãos angolanos. 
+                                    É um serviço público do governo para facilitar o acesso à formação profissional.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Contacto e Informações</h2>
+                    <p class="lead text-muted">
+                        Estamos aqui para ajudar! Entre em contacto connosco
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5 class="fw-bold">Telefone</h5>
+                        <p class="text-muted">+244 222 000 000</p>
+                        <p class="text-muted">Linha directa de apoio</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="fw-bold">Email</h5>
+                        <p class="text-muted">suporte@maptssdigital.ao</p>
+                        <p class="text-muted">Resposta em 24h</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Endereço</h5>
+                        <p class="text-muted">Luanda, Angola</p>
+                        <p class="text-muted">Ministério MAPTSS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">
+                        <i class="fas fa-graduation-cap me-2 text-warning"></i>
+                        MAPTSS Digital+
+                    </h5>
+                    <p class="text-light">
+                        Transformando o acesso à formação profissional em Angola através da tecnologia e inovação.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-warning me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-warning me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-warning me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-warning"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Links Rápidos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-light text-decoration-none">Início</a></li>
+                        <li><a href="#sobre" class="text-light text-decoration-none">Sobre</a></li>
+                        <li><a href="#funcionalidades" class="text-light text-decoration-none">Funcionalidades</a></li>
+                        <li><a href="#beneficios" class="text-light text-decoration-none">Benefícios</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Acesso</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/cidadao/index.html" class="text-light text-decoration-none">Painel Cidadão</a></li>
+                        <li><a href="pages/gestor/index.html" class="text-light text-decoration-none">Painel Gestor</a></li>
+                        <li><a href="pages/empregador/index.html" class="text-light text-decoration-none">Painel Empregador</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Recursos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#faq" class="text-light text-decoration-none">FAQ</a></li>
+                        <li><a href="#contacto" class="text-light text-decoration-none">Suporte</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Tutoriais</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Governo</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">MAPTSS</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">INEFOP</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Gov.ao</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 MAPTSS Digital+. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido para o povo angolano 🇦🇴</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap-local.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
