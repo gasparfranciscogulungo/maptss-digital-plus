@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel do Gestor - MAPTSS Digital+. Dashboard administrativo para gestão de inscrições e centros de formação.">
+    <title>Painel do Gestor | MAPTSS Digital+</title>
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/custom.css" rel="stylesheet">
+    <link href="../../css/animations.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-graduation-cap me-2 text-warning"></i>
+                MAPTSS Digital+ | Gestor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell me-1"></i>
+                            Notificações
+                            <span class="badge bg-danger">5</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-plus me-2"></i>Nova inscrição pendente</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-building me-2"></i>Centro precisa aprovação</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#notificacoes">Ver todas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-tie me-1"></i>
+                            Admin MAPTSS
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#perfil"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#configuracoes"><i class="fas fa-cog me-2"></i>Configurações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../../index.html"><i class="fas fa-sign-out-alt me-2"></i>Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="bg-angola-gradient text-white p-4 text-center">
+                            <div class="avatar mb-3">
+                                <i class="fas fa-user-shield fs-1"></i>
+                            </div>
+                            <h5 class="mb-1">Gestor MAPTSS</h5>
+                            <p class="mb-0 opacity-75">Administrador do Sistema</p>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="#dashboard" class="list-group-item list-group-item-action active">
+                                <i class="fas fa-tachometer-alt me-3"></i>Dashboard
+                            </a>
+                            <a href="#inscricoes" class="list-group-item list-group-item-action">
+                                <i class="fas fa-users me-3"></i>Gestão de Inscrições
+                                <span class="badge bg-warning text-dark float-end">15</span>
+                            </a>
+                            <a href="#centros" class="list-group-item list-group-item-action">
+                                <i class="fas fa-building me-3"></i>Centros de Formação
+                                <span class="badge bg-info float-end">234</span>
+                            </a>
+                            <a href="#relatorios" class="list-group-item list-group-item-action">
+                                <i class="fas fa-chart-bar me-3"></i>Relatórios Avançados
+                            </a>
+                            <a href="#exames" class="list-group-item list-group-item-action">
+                                <i class="fas fa-calendar-alt me-3"></i>Agenda de Exames
+                            </a>
+                            <a href="#notificacoes" class="list-group-item list-group-item-action">
+                                <i class="fas fa-bell me-3"></i>Sistema de Notificações
+                                <span class="badge bg-danger float-end">5</span>
+                            </a>
+                            <a href="#configuracoes" class="list-group-item list-group-item-action">
+                                <i class="fas fa-cog me-3"></i>Configurações
+                            </a>
+                            <a href="#logs" class="list-group-item list-group-item-action">
+                                <i class="fas fa-list-alt me-3"></i>Logs de Atividade
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Dashboard Executivo</h2>
+                        <div class="d-flex gap-2">
+                            <select class="form-select" style="width: auto;">
+                                <option value="hoje">Hoje</option>
+                                <option value="semana">Esta Semana</option>
+                                <option value="mes">Este Mês</option>
+                                <option value="ano">Este Ano</option>
+                            </select>
+                            <button class="btn btn-warning" id="exportDashboard">
+                                <i class="fas fa-download me-2"></i>Exportar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-users text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">12,847</h3>
+                                    <p class="text-muted mb-1">Inscrições Totais</p>
+                                    <small class="text-success"><i class="fas fa-arrow-up"></i> +15% vs mês anterior</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-check-circle text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">8,923</h3>
+                                    <p class="text-muted mb-1">Aprovadas</p>
+                                    <small class="text-success"><i class="fas fa-arrow-up"></i> +22% vs mês anterior</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-clock text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">1,247</h3>
+                                    <p class="text-muted mb-1">Pendentes</p>
+                                    <small class="text-warning"><i class="fas fa-minus"></i> Aguardando análise</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-building text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">234</h3>
+                                    <p class="text-muted mb-1">Centros Ativos</p>
+                                    <small class="text-info"><i class="fas fa-plus"></i> +5 novos este mês</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-8">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Inscrições por Mês</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="inscricoesChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Distribuição por Província</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="provinciasChart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activities & Quick Actions -->
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Atividades Recentes</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-success"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="fw-bold">Nova inscrição aprovada</h6>
+                                                <p class="text-muted mb-1">João Silva - Curso de Informática</p>
+                                                <small class="text-muted">Há 5 minutos</small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-info"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="fw-bold">Centro adicionado</h6>
+                                                <p class="text-muted mb-1">Centro INEFOP Benguela registrado</p>
+                                                <small class="text-muted">Há 1 hora</small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-warning"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="fw-bold">Relatório gerado</h6>
+                                                <p class="text-muted mb-1">Relatório mensal de inscrições</p>
+                                                <small class="text-muted">Há 2 horas</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Ações Rápidas</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-warning text-start" onclick="showSection('inscricoes')">
+                                            <i class="fas fa-user-plus me-2"></i>
+                                            Aprovar Inscrições
+                                            <span class="badge bg-white text-dark float-end">15</span>
+                                        </button>
+                                        <button class="btn btn-outline-primary text-start" onclick="showSection('centros')">
+                                            <i class="fas fa-building me-2"></i>
+                                            Adicionar Centro
+                                        </button>
+                                        <button class="btn btn-outline-success text-start" onclick="showSection('relatorios')">
+                                            <i class="fas fa-chart-bar me-2"></i>
+                                            Gerar Relatório
+                                        </button>
+                                        <button class="btn btn-outline-info text-start" onclick="showSection('exames')">
+                                            <i class="fas fa-calendar-alt me-2"></i>
+                                            Agendar Exame
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Inscricoes Management Section -->
+                <section id="inscricoes" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Gestão de Inscrições</h2>
+                        <div class="d-flex gap-2">
+                            <input type="search" class="form-control" placeholder="Buscar por nome, BI..." style="width: 250px;">
+                            <select class="form-select" style="width: auto;">
+                                <option value="">Todos os Status</option>
+                                <option value="pendente">Pendente</option>
+                                <option value="aprovado">Aprovado</option>
+                                <option value="rejeitado">Rejeitado</option>
+                            </select>
+                            <button class="btn btn-success" id="aprovarSelecionados">
+                                <i class="fas fa-check me-2"></i>Aprovar Selecionados
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Inscriptions Table -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th class="border-0">
+                                                <input type="checkbox" class="form-check-input" id="selectAll">
+                                            </th>
+                                            <th class="border-0">Candidato</th>
+                                            <th class="border-0">Curso</th>
+                                            <th class="border-0">Centro</th>
+                                            <th class="border-0">Status</th>
+                                            <th class="border-0">Data</th>
+                                            <th class="border-0">Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="inscricoesTableBody">
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-sm bg-primary text-white rounded-circle me-3">JS</div>
+                                                    <div>
+                                                        <div class="fw-bold">João Silva</div>
+                                                        <small class="text-muted">BI: 004123456LA041</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="fw-bold">Informática Básica</div>
+                                                <small class="text-muted">3 meses • Presencial</small>
+                                            </td>
+                                            <td>
+                                                <div>Centro INEFOP Luanda</div>
+                                                <small class="text-muted">Maianga</small>
+                                            </td>
+                                            <td><span class="badge bg-warning text-dark">Pendente</span></td>
+                                            <td>
+                                                <div>25/01/2024</div>
+                                                <small class="text-muted">14:30</small>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <button class="btn btn-outline-primary" title="Ver Detalhes">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                    <button class="btn btn-outline-success" title="Aprovar">
+                                                        <i class="fas fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-outline-danger" title="Rejeitar">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More rows would be populated dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Mostrando 1-10 de 1,247 inscrições</span>
+                                <nav>
+                                    <ul class="pagination pagination-sm mb-0">
+                                        <li class="page-item disabled"><a class="page-link" href="#">‹</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">›</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Other sections will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/utils.js"></script>
+    
+    <script>
+        // Gestor panel specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeGestorPanel();
+            initializeDashboardCharts();
+        });
+
+        function initializeGestorPanel() {
+            // Navigation between sections
+            const sidebarLinks = document.querySelectorAll('.list-group-item-action');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Hide all sections
+                    contentSections.forEach(section => section.style.display = 'none');
+                    
+                    // Show target section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+
+            // Select all checkbox functionality
+            const selectAllCheckbox = document.getElementById('selectAll');
+            const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+
+            if (selectAllCheckbox) {
+                selectAllCheckbox.addEventListener('change', function() {
+                    rowCheckboxes.forEach(checkbox => {
+                        checkbox.checked = this.checked;
+                    });
+                });
+            }
+
+            // Update select all when individual checkboxes change
+            rowCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const checkedCount = document.querySelectorAll('.row-checkbox:checked').length;
+                    selectAllCheckbox.checked = checkedCount === rowCheckboxes.length;
+                    selectAllCheckbox.indeterminate = checkedCount > 0 && checkedCount < rowCheckboxes.length;
+                });
+            });
+        }
+
+        function initializeDashboardCharts() {
+            // Inscricoes Chart
+            const inscricoesCtx = document.getElementById('inscricoesChart');
+            if (inscricoesCtx) {
+                new Chart(inscricoesCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                        datasets: [{
+                            label: 'Inscrições',
+                            data: [820, 932, 901, 934, 1290, 1330, 1320, 1450, 1200, 1100, 1250, 1400],
+                            borderColor: '#ffc107',
+                            backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                            tension: 0.1,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Provincias Chart
+            const provinciasCtx = document.getElementById('provinciasChart');
+            if (provinciasCtx) {
+                new Chart(provinciasCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Luanda', 'Benguela', 'Huambo', 'Outras'],
+                        datasets: [{
+                            data: [45, 25, 15, 15],
+                            backgroundColor: [
+                                '#dc3545',
+                                '#ffc107', 
+                                '#17a2b8',
+                                '#6c757d'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function showSection(sectionId) {
+            // Find and click the corresponding sidebar link
+            const targetLink = document.querySelector(`a[href="#${sectionId}"]`);
+            if (targetLink) {
+                targetLink.click();
+            }
+        }
+    </script>
+</body>
+</html>
