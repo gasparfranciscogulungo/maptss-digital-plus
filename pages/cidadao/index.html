@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel do Cidadão - MAPTSS Digital+. Inscreva-se nos cursos de formação profissional e encontre centros próximos.">
+    <title>Painel do Cidadão | MAPTSS Digital+</title>
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/custom.css" rel="stylesheet">
+    <link href="../../css/animations.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-graduation-cap me-2 text-warning"></i>
+                MAPTSS Digital+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#centros">Centros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cursos">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#perfil">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-warning text-dark ms-2 px-3" href="../../index.html">
+                            <i class="fas fa-sign-out-alt me-1"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="bg-angola-gradient text-white p-4 text-center">
+                            <div class="avatar mb-3">
+                                <i class="fas fa-user-circle fs-1"></i>
+                            </div>
+                            <h5 class="mb-1">João Silva</h5>
+                            <p class="mb-0 opacity-75">Cidadão Angolano</p>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="#dashboard" class="list-group-item list-group-item-action active">
+                                <i class="fas fa-tachometer-alt me-3"></i>Dashboard
+                            </a>
+                            <a href="#centros" class="list-group-item list-group-item-action">
+                                <i class="fas fa-map-marker-alt me-3"></i>Centros Próximos
+                            </a>
+                            <a href="#cursos" class="list-group-item list-group-item-action">
+                                <i class="fas fa-book-open me-3"></i>Meus Cursos
+                            </a>
+                            <a href="#inscricoes" class="list-group-item list-group-item-action">
+                                <i class="fas fa-file-alt me-3"></i>Inscrições
+                                <span class="badge bg-warning text-dark float-end">2</span>
+                            </a>
+                            <a href="#documentos" class="list-group-item list-group-item-action">
+                                <i class="fas fa-folder me-3"></i>Documentos
+                            </a>
+                            <a href="#perfil" class="list-group-item list-group-item-action">
+                                <i class="fas fa-user-edit me-3"></i>Perfil
+                            </a>
+                            <a href="#notificacoes" class="list-group-item list-group-item-action">
+                                <i class="fas fa-bell me-3"></i>Notificações
+                                <span class="badge bg-danger float-end">3</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Dashboard</h2>
+                        <button class="btn btn-warning" id="getCurrentLocationBtn">
+                            <i class="fas fa-location-arrow me-2"></i>Atualizar Localização
+                        </button>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-graduation-cap text-white fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold">2</h4>
+                                    <p class="text-muted mb-0">Cursos Inscritos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-check-circle text-white fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold">1</h4>
+                                    <p class="text-muted mb-0">Aprovado</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-clock text-white fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold">1</h4>
+                                    <p class="text-muted mb-0">Pendente</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-map-marker-alt text-white fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold">5</h4>
+                                    <p class="text-muted mb-0">Centros Próximos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">Atividade Recente</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-success"></div>
+                                    <div class="timeline-content">
+                                        <h6 class="fw-bold">Inscrição Aprovada</h6>
+                                        <p class="text-muted mb-1">Curso de Informática Básica aprovado no Centro INEFOP Luanda</p>
+                                        <small class="text-muted">Há 2 horas</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-info"></div>
+                                    <div class="timeline-content">
+                                        <h6 class="fw-bold">Documentos Enviados</h6>
+                                        <p class="text-muted mb-1">Certificado de habilitações enviado com sucesso</p>
+                                        <small class="text-muted">Ontem</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-warning"></div>
+                                    <div class="timeline-content">
+                                        <h6 class="fw-bold">Nova Inscrição</h6>
+                                        <p class="text-muted mb-1">Inscrição em Soldadura submetida para avaliação</p>
+                                        <small class="text-muted">Há 3 dias</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Centers Section -->
+                <section id="centros" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Centros Próximos</h2>
+                        <div class="d-flex gap-2">
+                            <select class="form-select" id="provinciaFilter">
+                                <option value="">Todas as Províncias</option>
+                                <option value="luanda">Luanda</option>
+                                <option value="benguela">Benguela</option>
+                                <option value="huambo">Huambo</option>
+                            </select>
+                            <button class="btn btn-outline-primary" id="mapViewBtn">
+                                <i class="fas fa-map me-2"></i>Vista do Mapa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Location Status -->
+                    <div class="card border-0 shadow-sm mb-4 bg-light">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-location-arrow text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Sua Localização</h6>
+                                    <p class="text-muted mb-0" id="currentLocation">Luanda, Angola (Ativar GPS para maior precisão)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Centers List -->
+                    <div class="row g-4" id="centrosList">
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="fw-bold">Centro INEFOP Luanda</h5>
+                                        <span class="badge bg-success">2.3 km</span>
+                                    </div>
+                                    <p class="text-muted mb-3">
+                                        <i class="fas fa-map-marker-alt me-2"></i>
+                                        Rua Rainha Ginga, Maianga, Luanda
+                                    </p>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <small class="text-muted">Cursos Disponíveis:</small>
+                                            <p class="fw-semibold mb-0">15</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <small class="text-muted">Vagas Abertas:</small>
+                                            <p class="fw-semibold mb-0 text-success">28</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-warning btn-sm flex-fill">
+                                            <i class="fas fa-eye me-1"></i>Ver Cursos
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-route"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info btn-sm">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="fw-bold">Centro Técnico Maianga</h5>
+                                        <span class="badge bg-warning text-dark">5.1 km</span>
+                                    </div>
+                                    <p class="text-muted mb-3">
+                                        <i class="fas fa-map-marker-alt me-2"></i>
+                                        Avenida Deolinda Rodrigues, Maianga
+                                    </p>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <small class="text-muted">Cursos Disponíveis:</small>
+                                            <p class="fw-semibold mb-0">12</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <small class="text-muted">Vagas Abertas:</small>
+                                            <p class="fw-semibold mb-0 text-warning">8</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-warning btn-sm flex-fill">
+                                            <i class="fas fa-eye me-1"></i>Ver Cursos
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-route"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info btn-sm">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Courses Section -->
+                <section id="cursos" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Cursos Disponíveis</h2>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#inscricaoModal">
+                            <i class="fas fa-plus me-2"></i>Nova Inscrição
+                        </button>
+                    </div>
+
+                    <!-- Filter Options -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label class="form-label">Área de Formação</label>
+                                    <select class="form-select">
+                                        <option value="">Todas as Áreas</option>
+                                        <option value="informatica">Informática</option>
+                                        <option value="soldadura">Soldadura</option>
+                                        <option value="electricidade">Electricidade</option>
+                                        <option value="mecanica">Mecânica</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Duração</label>
+                                    <select class="form-select">
+                                        <option value="">Qualquer Duração</option>
+                                        <option value="1-3">1-3 meses</option>
+                                        <option value="3-6">3-6 meses</option>
+                                        <option value="6+">Mais de 6 meses</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Modalidade</label>
+                                    <select class="form-select">
+                                        <option value="">Todas</option>
+                                        <option value="presencial">Presencial</option>
+                                        <option value="online">Online</option>
+                                        <option value="hibrido">Híbrido</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Status</label>
+                                    <select class="form-select">
+                                        <option value="">Todos</option>
+                                        <option value="inscricoes-abertas">Inscrições Abertas</option>
+                                        <option value="inicio-breve">Início Breve</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Courses Grid -->
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div class="bg-primary rounded p-2">
+                                            <i class="fas fa-laptop text-white"></i>
+                                        </div>
+                                        <span class="badge bg-success">Vagas Abertas</span>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Informática Básica</h5>
+                                    <p class="text-muted mb-3">Aprenda os fundamentos da informática, incluindo Windows, Word, Excel e Internet.</p>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block">Duração: 3 meses</small>
+                                        <small class="text-muted d-block">Modalidade: Presencial</small>
+                                        <small class="text-muted d-block">Centro: INEFOP Luanda</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold text-success">Gratuito</span>
+                                        <button class="btn btn-warning btn-sm">
+                                            <i class="fas fa-plus me-1"></i>Inscrever
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div class="bg-warning rounded p-2">
+                                            <i class="fas fa-tools text-white"></i>
+                                        </div>
+                                        <span class="badge bg-warning text-dark">Poucas Vagas</span>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">Soldadura Básica</h5>
+                                    <p class="text-muted mb-3">Curso prático de soldadura com certificação reconhecida nacionalmente.</p>
+                                    <div class="mb-3">
+                                        <small class="text-muted d-block">Duração: 4 meses</small>
+                                        <small class="text-muted d-block">Modalidade: Presencial</small>
+                                        <small class="text-muted d-block">Centro: Técnico Maianga</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold text-success">Gratuito</span>
+                                        <button class="btn btn-warning btn-sm">
+                                            <i class="fas fa-plus me-1"></i>Inscrever
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="inscricaoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-angola-gradient text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        Nova Inscrição
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="inscricaoForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Curso Desejado</label>
+                                <select class="form-select" required>
+                                    <option value="">Selecione um curso</option>
+                                    <option value="informatica">Informática Básica</option>
+                                    <option value="soldadura">Soldadura Básica</option>
+                                    <option value="electricidade">Electricidade</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Centro Preferido</label>
+                                <select class="form-select" required>
+                                    <option value="">Selecione um centro</option>
+                                    <option value="inefop-luanda">Centro INEFOP Luanda</option>
+                                    <option value="tecnico-maianga">Centro Técnico Maianga</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Documentos Necessários</label>
+                                <div class="border rounded p-3">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Bilhete de Identidade</label>
+                                            <input type="file" class="form-control" accept=".pdf,.jpg,.png">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Certificado de Habilitações</label>
+                                            <input type="file" class="form-control" accept=".pdf,.jpg,.png">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Fotografia</label>
+                                            <input type="file" class="form-control" accept=".jpg,.png">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Comprovativo de Residência</label>
+                                            <input type="file" class="form-control" accept=".pdf,.jpg,.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Motivação (Opcional)</label>
+                                <textarea class="form-control" rows="3" placeholder="Conte-nos porque deseja fazer este curso..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="inscricaoForm" class="btn btn-warning">
+                        <i class="fas fa-paper-plane me-2"></i>Submeter Inscrição
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/utils.js"></script>
+    
+    <script>
+        // Citizen panel specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCitizenPanel();
+        });
+
+        function initializeCitizenPanel() {
+            // Navigation between sections
+            const sidebarLinks = document.querySelectorAll('.list-group-item-action');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Hide all sections
+                    contentSections.forEach(section => section.style.display = 'none');
+                    
+                    // Show target section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+
+            // GPS Location functionality
+            const getCurrentLocationBtn = document.getElementById('getCurrentLocationBtn');
+            if (getCurrentLocationBtn) {
+                getCurrentLocationBtn.addEventListener('click', function() {
+                    MAPTSS.showLoading(this, 'Obtendo localização...');
+                    
+                    MAPTSS.getCurrentLocation()
+                        .then(location => {
+                            MAPTSS.hideLoading(this);
+                            document.getElementById('currentLocation').textContent = 
+                                `Lat: ${location.latitude.toFixed(4)}, Lng: ${location.longitude.toFixed(4)}`;
+                            MAPTSS.showNotification('Localização atualizada com sucesso!', 'success');
+                        })
+                        .catch(error => {
+                            MAPTSS.hideLoading(this);
+                            MAPTSS.showNotification(error.message, 'error');
+                        });
+                });
+            }
+
+            // Form submission
+            const inscricaoForm = document.getElementById('inscricaoForm');
+            if (inscricaoForm) {
+                inscricaoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simulate form submission
+                    const submitBtn = document.querySelector('button[form="inscricaoForm"]');
+                    MAPTSS.showLoading(submitBtn, 'Enviando...');
+                    
+                    setTimeout(() => {
+                        MAPTSS.hideLoading(submitBtn);
+                        MAPTSS.showNotification('Inscrição submetida com sucesso!', 'success');
+                        
+                        // Close modal
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('inscricaoModal'));
+                        modal.hide();
+                        
+                        // Reset form
+                        inscricaoForm.reset();
+                    }, 2000);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
