@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel do Empregador - MAPTSS Digital+. Encontre talentos qualificados e gerir estágios.">
+    <title>Painel do Empregador | MAPTSS Digital+</title>
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/custom.css" rel="stylesheet">
+    <link href="../../css/animations.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-graduation-cap me-2 text-warning"></i>
+                MAPTSS Digital+ | Empregador
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell me-1"></i>
+                            Notificações
+                            <span class="badge bg-success">3</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-graduate me-2"></i>Novo formando disponível</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-handshake me-2"></i>Pedido de estágio aprovado</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#notificacoes">Ver todas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-building me-1"></i>
+                            Empresa XYZ
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#perfil"><i class="fas fa-building me-2"></i>Perfil da Empresa</a></li>
+                            <li><a class="dropdown-item" href="#configuracoes"><i class="fas fa-cog me-2"></i>Configurações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../../index.html"><i class="fas fa-sign-out-alt me-2"></i>Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="bg-angola-gradient text-white p-4 text-center">
+                            <div class="avatar mb-3">
+                                <i class="fas fa-building fs-1"></i>
+                            </div>
+                            <h5 class="mb-1">Empresa XYZ, Lda</h5>
+                            <p class="mb-0 opacity-75">Setor Tecnológico</p>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="#dashboard" class="list-group-item list-group-item-action active">
+                                <i class="fas fa-tachometer-alt me-3"></i>Dashboard
+                            </a>
+                            <a href="#formandos" class="list-group-item list-group-item-action">
+                                <i class="fas fa-search me-3"></i>Busca de Formandos
+                                <span class="badge bg-info float-end">1,247</span>
+                            </a>
+                            <a href="#estagios" class="list-group-item list-group-item-action">
+                                <i class="fas fa-handshake me-3"></i>Sistema de Estágios
+                                <span class="badge bg-success float-end">5</span>
+                            </a>
+                            <a href="#certificados" class="list-group-item list-group-item-action">
+                                <i class="fas fa-qrcode me-3"></i>Verificação de Certificados
+                            </a>
+                            <a href="#vagas" class="list-group-item list-group-item-action">
+                                <i class="fas fa-briefcase me-3"></i>Dashboard de Vagas
+                                <span class="badge bg-warning text-dark float-end">12</span>
+                            </a>
+                            <a href="#relatorios" class="list-group-item list-group-item-action">
+                                <i class="fas fa-chart-line me-3"></i>Relatórios de Talentos
+                            </a>
+                            <a href="#integracao" class="list-group-item list-group-item-action">
+                                <i class="fas fa-link me-3"></i>Integração RH
+                            </a>
+                            <a href="#perfil" class="list-group-item list-group-item-action">
+                                <i class="fas fa-building-user me-3"></i>Perfil da Empresa
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Dashboard do Empregador</h2>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary">
+                                <i class="fas fa-plus me-2"></i>Nova Vaga
+                            </button>
+                            <button class="btn btn-warning">
+                                <i class="fas fa-download me-2"></i>Relatório Talentos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-user-graduate text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">1,247</h3>
+                                    <p class="text-muted mb-1">Formandos Disponíveis</p>
+                                    <small class="text-success"><i class="fas fa-arrow-up"></i> +89 este mês</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-handshake text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">23</h3>
+                                    <p class="text-muted mb-1">Estágios Ativos</p>
+                                    <small class="text-primary"><i class="fas fa-users"></i> 5 empresas parceiras</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-briefcase text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">12</h3>
+                                    <p class="text-muted mb-1">Vagas Abertas</p>
+                                    <small class="text-warning"><i class="fas fa-clock"></i> 8 aguardando candidatos</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-certificate text-white fs-4"></i>
+                                    </div>
+                                    <h3 class="fw-bold mb-1">156</h3>
+                                    <p class="text-muted mb-1">Certificados Verificados</p>
+                                    <small class="text-info"><i class="fas fa-shield-alt"></i> 100% autenticidade</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Search Section -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">Busca Rápida de Talentos</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Área de Competência</label>
+                                    <select class="form-select">
+                                        <option value="">Todas as Áreas</option>
+                                        <option value="informatica">Informática</option>
+                                        <option value="soldadura">Soldadura</option>
+                                        <option value="electricidade">Electricidade</option>
+                                        <option value="mecanica">Mecânica</option>
+                                        <option value="construcao">Construção Civil</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Localização</label>
+                                    <select class="form-select">
+                                        <option value="">Todas as Províncias</option>
+                                        <option value="luanda">Luanda</option>
+                                        <option value="benguela">Benguela</option>
+                                        <option value="huambo">Huambo</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Experiência</label>
+                                    <select class="form-select">
+                                        <option value="">Qualquer</option>
+                                        <option value="iniciante">Iniciante</option>
+                                        <option value="intermediario">Intermediário</option>
+                                        <option value="avancado">Avançado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button class="btn btn-warning w-100">
+                                        <i class="fas fa-search me-2"></i>Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Graduates -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-8">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Formandos Recém-Certificados</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="card border-0 bg-light">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar-sm bg-primary text-white rounded-circle me-3">MA</div>
+                                                            <div>
+                                                                <h6 class="mb-1">Maria Andrade</h6>
+                                                                <small class="text-muted">Informática Avançada</small>
+                                                            </div>
+                                                        </div>
+                                                        <span class="badge bg-success">Certificado</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <small class="text-muted">Luanda • 22 anos</small>
+                                                        <button class="btn btn-outline-primary btn-sm">
+                                                            <i class="fas fa-eye me-1"></i>Ver Perfil
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card border-0 bg-light">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar-sm bg-warning text-white rounded-circle me-3">JS</div>
+                                                            <div>
+                                                                <h6 class="mb-1">João Santos</h6>
+                                                                <small class="text-muted">Soldadura Industrial</small>
+                                                            </div>
+                                                        </div>
+                                                        <span class="badge bg-success">Certificado</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <small class="text-muted">Benguela • 28 anos</small>
+                                                        <button class="btn btn-outline-primary btn-sm">
+                                                            <i class="fas fa-eye me-1"></i>Ver Perfil
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button class="btn btn-outline-warning" onclick="showSection('formandos')">
+                                            <i class="fas fa-users me-2"></i>Ver Todos os Formandos
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Ações Rápidas</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-warning text-start" onclick="showSection('formandos')">
+                                            <i class="fas fa-search me-2"></i>
+                                            Buscar Talentos
+                                        </button>
+                                        <button class="btn btn-outline-primary text-start" onclick="showSection('estagios')">
+                                            <i class="fas fa-handshake me-2"></i>
+                                            Criar Estágio
+                                        </button>
+                                        <button class="btn btn-outline-success text-start" onclick="showSection('certificados')">
+                                            <i class="fas fa-qrcode me-2"></i>
+                                            Verificar Certificado
+                                        </button>
+                                        <button class="btn btn-outline-info text-start" onclick="showSection('vagas')">
+                                            <i class="fas fa-briefcase me-2"></i>
+                                            Publicar Vaga
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics and Trends -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">Estatísticas de Recrutamento</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-4">
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <div class="display-6 fw-bold text-success">89%</div>
+                                        <small class="text-muted">Taxa de Sucesso em Estágios</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <div class="display-6 fw-bold text-primary">4.8</div>
+                                        <small class="text-muted">Avaliação Média dos Formandos</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <div class="display-6 fw-bold text-warning">72h</div>
+                                        <small class="text-muted">Tempo Médio de Recrutamento</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <div class="display-6 fw-bold text-info">156</div>
+                                        <small class="text-muted">Contratos Assinados Este Ano</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Formandos Search Section -->
+                <section id="formandos" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Busca de Formandos</h2>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary">
+                                <i class="fas fa-filter me-2"></i>Filtros Avançados
+                            </button>
+                            <button class="btn btn-warning">
+                                <i class="fas fa-heart me-2"></i>Meus Favoritos (12)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Search -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label class="form-label">Pesquisar por nome</label>
+                                    <input type="search" class="form-control" placeholder="Nome do candidato...">
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">Competência</label>
+                                    <select class="form-select">
+                                        <option value="">Todas</option>
+                                        <option value="informatica">Informática</option>
+                                        <option value="soldadura">Soldadura</option>
+                                        <option value="electricidade">Electricidade</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">Experiência</label>
+                                    <select class="form-select">
+                                        <option value="">Qualquer</option>
+                                        <option value="0-1">0-1 anos</option>
+                                        <option value="1-3">1-3 anos</option>
+                                        <option value="3+">3+ anos</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">Idade</label>
+                                    <select class="form-select">
+                                        <option value="">Qualquer</option>
+                                        <option value="18-25">18-25 anos</option>
+                                        <option value="25-35">25-35 anos</option>
+                                        <option value="35+">35+ anos</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">Localização</label>
+                                    <select class="form-select">
+                                        <option value="">Todas</option>
+                                        <option value="luanda">Luanda</option>
+                                        <option value="benguela">Benguela</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button class="btn btn-primary w-100">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avatar-lg bg-primary text-white rounded-circle me-3">MA</div>
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Maria Andrade</h5>
+                                                <small class="text-muted">22 anos • Luanda</small>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-outline-danger btn-sm">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="badge bg-success me-1">Informática Avançada</span>
+                                        <span class="badge bg-info me-1">Excel Expert</span>
+                                        <span class="badge bg-warning text-dark">Inglês</span>
+                                    </div>
+                                    <p class="text-muted mb-3">Formada em Informática com especialização em desenvolvimento web. Experiência em projetos académicos e estágio...</p>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <small class="text-muted">Avaliação:</small>
+                                            <div class="fw-bold text-success">★★★★★ 4.9</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <small class="text-muted">Disponibilidade:</small>
+                                            <div class="fw-bold text-info">Imediata</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-warning btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#candidateProfileModal">
+                                            <i class="fas fa-eye me-1"></i>Ver Perfil
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-envelope"></i>
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm">
+                                            <i class="fas fa-handshake"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More candidate cards would be here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-center mt-4">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a class="page-link" href="#">‹</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">›</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Certificate Verification Section -->
+                <section id="certificados" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-bold text-angola-red">Verificação de Certificados</h2>
+                        <button class="btn btn-warning">
+                            <i class="fas fa-history me-2"></i>Histórico de Verificações
+                        </button>
+                    </div>
+
+                    <!-- QR Code Scanner -->
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Scanner QR Code</h5>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="bg-light border-2 border-dashed rounded p-5 mb-3">
+                                        <i class="fas fa-qrcode fa-3x text-muted mb-3"></i>
+                                        <p class="text-muted">Clique para ativar a câmara e escanear o QR Code do certificado</p>
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-camera me-2"></i>Ativar Scanner
+                                        </button>
+                                    </div>
+                                    <small class="text-muted">Ou insira o código manualmente abaixo</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h5 class="fw-bold mb-0">Verificação Manual</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label">Código do Certificado</label>
+                                            <input type="text" class="form-control" placeholder="Ex: MAPTSS-2024-INF-001234">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Nome do Formando</label>
+                                            <input type="text" class="form-control" placeholder="Nome completo">
+                                        </div>
+                                        <button type="submit" class="btn btn-warning w-100">
+                                            <i class="fas fa-search me-2"></i>Verificar Certificado
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verification Result -->
+                    <div class="card border-0 shadow-sm mt-4" id="verificationResult" style="display: none;">
+                        <div class="card-header bg-success text-white py-3">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-check-circle me-2"></i>
+                                Certificado Válido
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-4">
+                                <div class="col-md-8">
+                                    <h6 class="fw-bold">Informações do Certificado</h6>
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td class="fw-bold">Formando:</td>
+                                            <td>Maria Silva Andrade</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Curso:</td>
+                                            <td>Informática Avançada</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Centro:</td>
+                                            <td>Centro INEFOP Luanda</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Data de Conclusão:</td>
+                                            <td>15 de Janeiro, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Classificação:</td>
+                                            <td><span class="badge bg-success">Muito Bom (18/20)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Validade:</td>
+                                            <td>Permanente</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="border rounded p-3">
+                                        <i class="fas fa-certificate fa-3x text-warning mb-2"></i>
+                                        <p class="fw-bold">Certificado Digital</p>
+                                        <small class="text-muted">MAPTSS-2024-INF-001234</small>
+                                        <br>
+                                        <button class="btn btn-outline-primary btn-sm mt-2">
+                                            <i class="fas fa-download me-1"></i>Download PDF
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Other sections would be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Candidate Profile Modal -->
+    <div class="modal fade" id="candidateProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-angola-gradient text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-user-graduate me-2"></i>
+                        Perfil Detalhado do Candidato
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100 text-center">
+                                <div class="card-body">
+                                    <div class="avatar-xl bg-primary text-white rounded-circle mx-auto mb-3">MA</div>
+                                    <h5 class="fw-bold">Maria Silva Andrade</h5>
+                                    <p class="text-muted">22 anos • Luanda</p>
+                                    <div class="row text-center mb-3">
+                                        <div class="col-4">
+                                            <div class="fw-bold text-success">4.9</div>
+                                            <small class="text-muted">Avaliação</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="fw-bold text-primary">3</div>
+                                            <small class="text-muted">Cursos</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="fw-bold text-warning">2</div>
+                                            <small class="text-muted">Estágios</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-warning">
+                                            <i class="fas fa-handshake me-2"></i>Propor Estágio
+                                        </button>
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-envelope me-2"></i>Enviar Mensagem
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <h6 class="fw-bold mb-3">Competências Certificadas</h6>
+                                    <div class="row g-2 mb-4">
+                                        <div class="col-auto">
+                                            <span class="badge bg-success">Informática Avançada</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <span class="badge bg-info">Microsoft Excel</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <span class="badge bg-warning text-dark">HTML/CSS</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <span class="badge bg-primary">Inglês Intermédio</span>
+                                        </div>
+                                    </div>
+
+                                    <h6 class="fw-bold mb-3">Historial de Formação</h6>
+                                    <div class="timeline mb-4">
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-success"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="fw-bold">Informática Avançada</h6>
+                                                <p class="text-muted mb-1">Centro INEFOP Luanda • Jan 2024</p>
+                                                <small class="badge bg-success">Concluído com Distinção</small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-info"></div>
+                                            <div class="timeline-content">
+                                                <h6 class="fw-bold">Microsoft Office</h6>
+                                                <p class="text-muted mb-1">Centro Técnico Maianga • Nov 2023</p>
+                                                <small class="badge bg-info">Concluído</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h6 class="fw-bold mb-3">Contacto e Disponibilidade</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <small class="text-muted">Telefone:</small>
+                                            <div class="fw-bold">+244 923 456 789</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small class="text-muted">Email:</small>
+                                            <div class="fw-bold">maria.andrade@email.com</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small class="text-muted">Disponibilidade:</small>
+                                            <div class="fw-bold text-success">Imediata</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small class="text-muted">Tipo de Trabalho:</small>
+                                            <div class="fw-bold">Tempo Integral</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="fas fa-heart me-2"></i>Adicionar aos Favoritos
+                    </button>
+                    <button type="button" class="btn btn-warning">
+                        <i class="fas fa-handshake me-2"></i>Propor Estágio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/utils.js"></script>
+    
+    <script>
+        // Empregador panel specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeEmpregadorPanel();
+        });
+
+        function initializeEmpregadorPanel() {
+            // Navigation between sections
+            const sidebarLinks = document.querySelectorAll('.list-group-item-action');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Hide all sections
+                    contentSections.forEach(section => section.style.display = 'none');
+                    
+                    // Show target section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+        }
+
+        function showSection(sectionId) {
+            // Find and click the corresponding sidebar link
+            const targetLink = document.querySelector(`a[href="#${sectionId}"]`);
+            if (targetLink) {
+                targetLink.click();
+            }
+        }
+    </script>
+</body>
+</html>
