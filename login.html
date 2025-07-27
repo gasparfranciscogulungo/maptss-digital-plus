@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login MAPTSS Digital+ - Acesso seguro à plataforma de formação profissional">
+    <title>Login | MAPTSS Digital+</title>
+    
+    <!-- CSS Libraries -->
+    <link href="../css/bootstrap-local.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/animations.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-graduation-cap me-2 text-warning"></i>
+                MAPTSS Digital+
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="../index.html">
+                    <i class="fas fa-arrow-left me-1"></i>Voltar ao Início
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Left Side - Branding -->
+            <div class="col-lg-6 d-none d-lg-flex align-items-center bg-angola-gradient">
+                <div class="container text-white">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h1 class="display-4 fw-bold mb-4">
+                                Bem-vindo ao MAPTSS Digital+
+                            </h1>
+                            <p class="lead mb-4">
+                                A plataforma digital que conecta angolanos às melhores oportunidades 
+                                de formação profissional e desenvolvimento de carreira.
+                            </p>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-white bg-opacity-20 rounded-circle p-3 me-3">
+                                            <i class="fas fa-users fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">500.000+</h6>
+                                            <small>Cidadãos registados</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-white bg-opacity-20 rounded-circle p-3 me-3">
+                                            <i class="fas fa-building fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">234</h6>
+                                            <small>Centros ativos</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-white bg-opacity-20 rounded-circle p-3 me-3">
+                                            <i class="fas fa-certificate fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">1.2M+</h6>
+                                            <small>Certificados emitidos</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-white bg-opacity-20 rounded-circle p-3 me-3">
+                                            <i class="fas fa-map-marker-alt fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">18</h6>
+                                            <small>Províncias cobertas</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <blockquote class="blockquote">
+                                <p class="mb-3">
+                                    "A formação profissional é a chave para o desenvolvimento 
+                                    sustentável de Angola e o progresso do nosso povo."
+                                </p>
+                                <footer class="blockquote-footer text-white-50">
+                                    Ministério MAPTSS
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="col-lg-6 d-flex align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-7">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-body p-5">
+                                    <div class="text-center mb-4">
+                                        <div class="bg-angola-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                                             style="width: 80px; height: 80px;">
+                                            <i class="fas fa-user fs-2 text-white"></i>
+                                        </div>
+                                        <h2 class="fw-bold">Iniciar Sessão</h2>
+                                        <p class="text-muted">Aceda à sua conta MAPTSS Digital+</p>
+                                    </div>
+
+                                    <!-- User Type Selection -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">Tipo de Utilizador</label>
+                                        <div class="row g-2">
+                                            <div class="col-md-4">
+                                                <input type="radio" class="btn-check" name="userType" id="userTypeCidadao" value="citizen" checked>
+                                                <label class="btn btn-outline-primary w-100" for="userTypeCidadao">
+                                                    <i class="fas fa-user d-block mb-2"></i>
+                                                    <small>Cidadão</small>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="radio" class="btn-check" name="userType" id="userTypeGestor" value="gestor">
+                                                <label class="btn btn-outline-primary w-100" for="userTypeGestor">
+                                                    <i class="fas fa-user-tie d-block mb-2"></i>
+                                                    <small>Gestor</small>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="radio" class="btn-check" name="userType" id="userTypeEmpregador" value="empregador">
+                                                <label class="btn btn-outline-primary w-100" for="userTypeEmpregador">
+                                                    <i class="fas fa-building d-block mb-2"></i>
+                                                    <small>Empregador</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Login Form -->
+                                    <form id="loginForm">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>
+                                                <input type="email" class="form-control" id="email" required 
+                                                       placeholder="seu@email.com">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Palavra-passe</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-lock"></i>
+                                                </span>
+                                                <input type="password" class="form-control" id="password" required 
+                                                       placeholder="Sua palavra-passe">
+                                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                                        <label class="form-check-label" for="rememberMe">
+                                                            Lembrar-me
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                                                        Esqueceu a palavra-passe?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-warning w-100 py-3 fw-bold mb-3" id="loginBtn">
+                                            <i class="fas fa-sign-in-alt me-2"></i>
+                                            Entrar
+                                        </button>
+                                    </form>
+
+                                    <!-- Demo Credentials -->
+                                    <div class="alert alert-info">
+                                        <h6 class="fw-bold mb-2">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            Credenciais de Demonstração
+                                        </h6>
+                                        <div class="row g-2 small">
+                                            <div class="col-12">
+                                                <strong>Cidadão:</strong> joao.silva@email.com / citizen123
+                                            </div>
+                                            <div class="col-12">
+                                                <strong>Gestor:</strong> gestor@maptss.ao / gestor123
+                                            </div>
+                                            <div class="col-12">
+                                                <strong>Empregador:</strong> rh@empresa.ao / empregador123
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="text-muted mb-2">
+                                            Não tem conta? 
+                                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+                                                Registar-se
+                                            </a>
+                                        </p>
+                                        <small class="text-muted">
+                                            Ao entrar, aceita os 
+                                            <a href="#" class="text-decoration-none">Termos de Uso</a> 
+                                            e 
+                                            <a href="#" class="text-decoration-none">Política de Privacidade</a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-key me-2"></i>
+                        Recuperar Palavra-passe
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgotPasswordForm">
+                        <div class="mb-3">
+                            <label for="resetEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="resetEmail" required 
+                                   placeholder="Insira o seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="resetUserType" class="form-label">Tipo de Utilizador</label>
+                            <select class="form-select" id="resetUserType" required>
+                                <option value="">Selecione...</option>
+                                <option value="citizen">Cidadão</option>
+                                <option value="gestor">Gestor</option>
+                                <option value="empregador">Empregador</option>
+                            </select>
+                        </div>
+                        <p class="text-muted">
+                            Enviaremos instruções para recuperar a sua palavra-passe por email e SMS.
+                        </p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="forgotPasswordForm" class="btn btn-warning">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-angola-gradient text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-user-plus me-2"></i>
+                        Criar Nova Conta
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="regName" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="regName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="regEmail" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regPassword" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="regPassword" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regConfirmPassword" class="form-label">Confirmar Palavra-passe</label>
+                                <input type="password" class="form-control" id="regConfirmPassword" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="regUserType" class="form-label">Tipo de Conta</label>
+                                <select class="form-select" id="regUserType" required>
+                                    <option value="">Selecione o tipo de conta</option>
+                                    <option value="citizen">Cidadão - Acesso a cursos e inscrições</option>
+                                    <option value="empregador">Empregador - Busca de talentos e verificação</option>
+                                </select>
+                                <div class="form-text">
+                                    Contas de Gestor requerem aprovação administrativa.
+                                </div>
+                            </div>
+                            <div class="col-12" id="empregadorFields" style="display: none;">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="companyName" class="form-label">Nome da Empresa</label>
+                                        <input type="text" class="form-control" id="companyName">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="companySector" class="form-label">Setor</label>
+                                        <select class="form-select" id="companySector">
+                                            <option value="">Selecione...</option>
+                                            <option value="tecnologia">Tecnologia</option>
+                                            <option value="construcao">Construção</option>
+                                            <option value="industria">Indústria</option>
+                                            <option value="servicos">Serviços</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptTerms" required>
+                                    <label class="form-check-label" for="acceptTerms">
+                                        Aceito os <a href="#" class="text-decoration-none">Termos de Uso</a> 
+                                        e <a href="#" class="text-decoration-none">Política de Privacidade</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="registerForm" class="btn btn-warning">
+                        <i class="fas fa-user-plus me-2"></i>
+                        Criar Conta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrap-local.js"></script>
+    <script src="../api/auth.js"></script>
+    <script src="../api/database.js"></script>
+    <script src="../api/api.js"></script>
+    <script src="../components/components.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/utils.js"></script>
+    
+    <script>
+        // Login page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeLoginPage();
+        });
+
+        function initializeLoginPage() {
+            // Toggle password visibility
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
+            });
+
+            // Show/hide employer fields in registration
+            const regUserType = document.getElementById('regUserType');
+            const empregadorFields = document.getElementById('empregadorFields');
+            
+            regUserType.addEventListener('change', function() {
+                if (this.value === 'empregador') {
+                    empregadorFields.style.display = 'block';
+                    document.getElementById('companyName').required = true;
+                    document.getElementById('companySector').required = true;
+                } else {
+                    empregadorFields.style.display = 'none';
+                    document.getElementById('companyName').required = false;
+                    document.getElementById('companySector').required = false;
+                }
+            });
+
+            // Login form submission
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const userType = document.querySelector('input[name="userType"]:checked').value;
+                const loginBtn = document.getElementById('loginBtn');
+                
+                try {
+                    MAPTSSComponents.showLoading(loginBtn, 'Entrando...');
+                    
+                    const result = await window.MAPTSSApi.auth.login({
+                        email: email,
+                        password: password,
+                        userType: userType
+                    });
+                    
+                    if (result.success) {
+                        MAPTSSComponents.showNotification('Login realizado com sucesso!', 'success');
+                        
+                        // Redirect based on user type
+                        setTimeout(() => {
+                            switch (userType) {
+                                case 'citizen':
+                                    window.location.href = 'pages/cidadao/index.html';
+                                    break;
+                                case 'gestor':
+                                    window.location.href = 'pages/gestor/index.html';
+                                    break;
+                                case 'empregador':
+                                    window.location.href = 'pages/empregador/index.html';
+                                    break;
+                            }
+                        }, 1000);
+                    }
+                } catch (error) {
+                    MAPTSSComponents.showNotification(error.message, 'error');
+                } finally {
+                    MAPTSSComponents.hideLoading(loginBtn);
+                }
+            });
+
+            // Forgot password form
+            const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+            forgotPasswordForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('resetEmail').value;
+                const userType = document.getElementById('resetUserType').value;
+                
+                try {
+                    const result = await window.MAPTSSApi.auth.resetPassword(email, userType);
+                    
+                    if (result.success) {
+                        MAPTSSComponents.showNotification('Instruções enviadas para o seu email!', 'success');
+                        
+                        // For demo purposes, show the temporary password
+                        setTimeout(() => {
+                            MAPTSSComponents.showNotification(
+                                `Senha temporária: ${result.tempPassword}`, 
+                                'info', 
+                                10000
+                            );
+                        }, 1000);
+                        
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
+                        modal.hide();
+                    }
+                } catch (error) {
+                    MAPTSSComponents.showNotification(error.message, 'error');
+                }
+            });
+
+            // Registration form
+            const registerForm = document.getElementById('registerForm');
+            registerForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const password = document.getElementById('regPassword').value;
+                const confirmPassword = document.getElementById('regConfirmPassword').value;
+                
+                if (password !== confirmPassword) {
+                    MAPTSSComponents.showNotification('As palavras-passe não coincidem', 'error');
+                    return;
+                }
+                
+                const userData = {
+                    name: document.getElementById('regName').value,
+                    email: document.getElementById('regEmail').value,
+                    password: password,
+                    userType: document.getElementById('regUserType').value,
+                    additionalData: {}
+                };
+                
+                if (userData.userType === 'empregador') {
+                    userData.additionalData.company = document.getElementById('companyName').value;
+                    userData.additionalData.sector = document.getElementById('companySector').value;
+                }
+                
+                try {
+                    const result = await window.MAPTSSApi.auth.register(userData);
+                    
+                    if (result.success) {
+                        let message = 'Conta criada com sucesso!';
+                        if (result.requiresActivation) {
+                            message += ' Aguarde aprovação do administrador.';
+                        }
+                        
+                        MAPTSSComponents.showNotification(message, 'success');
+                        
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+                        modal.hide();
+                        
+                        // Reset form
+                        registerForm.reset();
+                    }
+                } catch (error) {
+                    MAPTSSComponents.showNotification(error.message, 'error');
+                }
+            });
+
+            // Auto-fill demo credentials
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.key === 'd') {
+                    e.preventDefault();
+                    const userType = document.querySelector('input[name="userType"]:checked').value;
+                    
+                    const credentials = {
+                        'citizen': { email: 'joao.silva@email.com', password: 'citizen123' },
+                        'gestor': { email: 'gestor@maptss.ao', password: 'gestor123' },
+                        'empregador': { email: 'rh@empresa.ao', password: 'empregador123' }
+                    };
+                    
+                    if (credentials[userType]) {
+                        document.getElementById('email').value = credentials[userType].email;
+                        document.getElementById('password').value = credentials[userType].password;
+                        MAPTSSComponents.showNotification('Credenciais demo preenchidas!', 'info');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
