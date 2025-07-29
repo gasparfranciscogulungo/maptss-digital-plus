@@ -1,15 +1,22 @@
-/* Angola Color Palette */
+/* MAPTSS Digital+ Modern Blue Palette */
 :root {
-    --angola-red: #CE1126;
-    --angola-yellow: #FFCD00;
-    --angola-black: #000000;
-    --angola-white: #FFFFFF;
-    --primary-dark: #0D1B2A;
-    --primary-light: #F8F9FA;
-    --text-muted: #6C757D;
-    --shadow-color: rgba(206, 17, 38, 0.1);
-    --gradient-primary: linear-gradient(135deg, var(--angola-red), var(--angola-yellow));
-    --gradient-secondary: linear-gradient(135deg, var(--primary-dark), var(--angola-red));
+    /* New Blue Color Palette */
+    --primary-dark-blue: #1e293b;
+    --secondary-dark-blue: #334155;
+    --primary-light-blue: #3b82f6;
+    --secondary-light-blue: #60a5fa;
+    --white: #ffffff;
+    --light-gray: #f8fafc;
+    --dark-text: #0f172a;
+    --light-text: #64748b;
+    
+    /* Legacy variables for compatibility */
+    --primary-dark: #1e293b;
+    --primary-light: #f8fafc;
+    --text-muted: #64748b;
+    --shadow-color: rgba(59, 130, 246, 0.1);
+    --gradient-primary: linear-gradient(135deg, var(--primary-light-blue), var(--secondary-light-blue));
+    --gradient-secondary: linear-gradient(135deg, var(--primary-dark-blue), var(--secondary-dark-blue));
 }
 
 /* Global Styles */
@@ -26,37 +33,45 @@ body {
     overflow-x: hidden;
 }
 
-/* Custom Angola Colors */
-.text-angola-red {
-    color: var(--angola-red) !important;
+/* Modern Blue Utility Classes */
+.text-primary-blue {
+    color: var(--primary-light-blue) !important;
 }
 
-.text-angola-yellow {
-    color: var(--angola-yellow) !important;
+.text-secondary-blue {
+    color: var(--secondary-light-blue) !important;
 }
 
-.bg-angola-red {
-    background-color: var(--angola-red) !important;
+.text-dark-blue {
+    color: var(--primary-dark-blue) !important;
 }
 
-.bg-angola-yellow {
-    background-color: var(--angola-yellow) !important;
+.bg-primary-blue {
+    background-color: var(--primary-light-blue) !important;
 }
 
-.bg-angola-gradient {
+.bg-secondary-blue {
+    background-color: var(--secondary-light-blue) !important;
+}
+
+.bg-dark-blue {
+    background-color: var(--primary-dark-blue) !important;
+}
+
+.bg-blue-gradient {
     background: var(--gradient-primary);
 }
 
-.bg-angola-dark-gradient {
+.bg-dark-blue-gradient {
     background: var(--gradient-secondary);
 }
 
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, 
-        rgba(13, 27, 42, 0.95) 0%, 
-        rgba(206, 17, 38, 0.9) 50%, 
-        rgba(255, 205, 0, 0.85) 100%
+        rgba(30, 41, 59, 0.95) 0%, 
+        rgba(59, 130, 246, 0.9) 50%, 
+        rgba(96, 165, 250, 0.85) 100%
     ),
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
     background-size: cover;
